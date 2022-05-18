@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{410ACDF0-0457-4617-8C93-0DD69BD39947}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebsocketWinformDemo_Standard</RootNamespace>
+    <AssemblyName>WebsocketWinformDemo-Standard</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\20181116\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Standard,MK3300</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>supersocket\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.Common">
+      <HintPath>supersocket\SuperSocket.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.SocketBase">
+      <HintPath>supersocket\SuperSocket.SocketBase.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.SocketEngine">
+      <HintPath>supersocket\SuperSocket.SocketEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.WebSocket">
+      <HintPath>supersocket\SuperSocket.WebSocket.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="03_FromDeviceRequetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_FromDeviceRequetForm.Designer.cs">
+      <DependentUpon>03_FromDeviceRequetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="API\API_00_PINGPONG.cs" />
+    <Compile Include="API\API_02_AdminLog.cs" />
+    <Compile Include="API\API_02_TimeLog.cs" />
+    <Compile Include="API\API_03_CheckUserByDevice.cs" />
+    <Compile Include="API\pageAccess\API_03_RemoteOpen.cs" />
+    <Compile Include="API\pageAdvanced\API_03_TakePhoto.cs" />
+    <Compile Include="API\pageBasic\API_03_GetNameList.cs" />
+    <Compile Include="API\pageBasic\API_03_SetNameList.cs" />
+    <Compile Include="API\pageUser\API_03_GetAllUserID.cs" />
+    <Compile Include="API\pageUser\API_03_GetIdantifyCard.cs" />
+    <Compile Include="API\pageUser\API_03_SetFaceDataByPicture.cs" />
+    <Compile Include="API\pageUser\API_03_SetFingerDataByPicture.cs" />
+    <Compile Include="API\pageAccess\API_03_SetAccessList.cs" />
+    <Compile Include="API\pageAccess\API_03_AccessStatus.cs" />
+    <Compile Include="API\pageAccess\API_03_GetAccessSetting.cs" />
+    <Compile Include="API\pageAccess\API_03_SetAccessSetting.cs" />
+    <Compile Include="API\pageInfo\API_03_GetDeviceInfo.cs" />
+    <Compile Include="API\pageInfo\API_03_GetStoreStatus.cs" />
+    <Compile Include="API\pageAttandance\API_03_GetAttendanceRule.cs" />
+    <Compile Include="API\pageAttandance\API_03_SetAttendanceRule.cs" />
+    <Compile Include="API\pageData\API_03_GetAttendanceLog.cs" />
+    <Compile Include="API\pageData\API_03_GetFirstGlog.cs" />
+    <Compile Include="API\pageData\API_03_GetNextGlog.cs" />
+    <Compile Include="API\pageData\API_03_EmptyAllData.cs" />
+    <Compile Include="API\pageData\API_03_EmptyManageLog.cs" />
+    <Compile Include="API\pageData\API_03_EmptyTimeLog.cs" />
+    <Compile Include="API\pageData\API_03_EmptyUserEnrollmentData.cs" />
+    <Compile Include="API\pageData\API_03_GetLogSetting.cs" />
+    <Compile Include="API\pageData\API_03_SetLogSetting.cs" />
+    <Compile Include="API\pageNet\API_03_GetCloudServer.cs" />
+    <Compile Include="API\pageNet\API_03_GetGPS.cs" />
+    <Compile Include="API\pageNet\API_03_GetLocalServer.cs" />
+    <Compile Include="API\pageNet\API_03_GetStreamingServer.cs" />
+    <Compile Include="API\pageNet\API_03_GetVPNServer.cs" />
+    <Compile Include="API\pageNet\API_03_SetCloudServer.cs" />
+    <Compile Include="API\pageNet\API_03_SetGPS.cs" />
+    <Compile Include="API\pageNet\API_03_SetLocalServer.cs" />
+    <Compile Include="API\pageNet\API_03_SetStreamingServer.cs" />
+    <Compile Include="API\pageNet\API_03_SetVPNServer.cs" />
+    <Compile Include="API\pageNet\API_03_GetEthernetSetting.cs" />
+    <Compile Include="API\pageNet\API_03_GetMobileNetSetting.cs" />
+    <Compile Include="API\pageNet\API_03_GetWifiSetting.cs" />
+    <Compile Include="API\pageNet\API_03_SetEthernetSetting.cs" />
+    <Compile Include="API\pageNet\API_03_SetMobileNetSetting.cs" />
+    <Compile Include="API\pageNet\API_03_SetWifiSetting.cs" />
+    <Compile Include="API\pageAdvanced\API_03_FirmwareUpgradeByCloud.cs" />
+    <Compile Include="API\pageAdvanced\API_03_GetDeviceSetting.cs" />
+    <Compile Include="API\pageAdvanced\API_03_GetPowerSetting.cs" />
+    <Compile Include="API\pageAdvanced\API_03_RestoreDevice.cs" />
+    <Compile Include="API\pageAdvanced\API_03_SetDeviceSetting.cs" />
+    <Compile Include="API\pageAdvanced\API_03_SetPowerSetting.cs" />
+    <Compile Include="API\pageBasic\API_03_EnableDevice.cs" />
+    <Compile Include="API\pageBasic\API_03_GetBellTime.cs" />
+    <Compile Include="API\pageBasic\API_03_GetDepartment.cs" />
+    <Compile Include="API\pageBasic\API_03_GetProxyName.cs" />
+    <Compile Include="API\pageBasic\API_03_GetTime.cs" />
+    <Compile Include="API\pageBasic\API_03_SetBellTime.cs" />
+    <Compile Include="API\pageBasic\API_03_SetDepartment.cs" />
+    <Compile Include="API\pageBasic\API_03_SetProxyName.cs" />
+    <Compile Include="API\pageBasic\API_03_SetTime.cs" />
+    <Compile Include="API\pageUser\API_03_ExitRemoteEnroll.cs" />
+    <Compile Include="API\pageUser\API_03_GetFaceData.cs" />
+    <Compile Include="API\pageUser\API_03_GetFingerData.cs" />
+    <Compile Include="API\pageUser\API_03_GetUserAllInfo.cs" />
+    <Compile Include="API\pageUser\API_03_GetUserCardNo.cs" />
+    <Compile Include="API\pageUser\API_03_GetUserData.cs" />
+    <Compile Include="API\pageUser\API_03_GetUserPassword.cs" />
+    <Compile Include="API\pageUser\API_03_GetUserPhoto.cs" />
+    <Compile Include="API\pageUser\API_03_GetUserQRCode.cs" />
+    <Compile Include="API\pageUser\API_03_GetUserSampleInfo.cs" />
+    <Compile Include="API\pageUser\API_03_RemoteEnroll.cs" />
+    <Compile Include="API\pageUser\API_03_SetFaceData.cs" />
+    <Compile Include="API\pageUser\API_03_SetFingerData.cs" />
+    <Compile Include="API\pageUser\API_03_SetIdantifyCard.cs" />
+    <Compile Include="API\pageUser\API_03_SetUserData.cs" />
+    <Compile Include="API\pageUser\API_03_SetUserPhoto.cs" />
+    <Compile Include="API\pageUser\API_03_TakeOffManager.cs" />
+    <Compile Include="API\API_same.cs" />
+    <Compile Include="API\API_Standard.cs" />
+    <Compile Include="02_deviceAPIOperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_deviceAPIOperationForm.Designer.cs">
+      <DependentUpon>02_deviceAPIOperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01_mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01_mainForm.Designer.cs">
+      <DependentUpon>01_mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="API\pageAccess\API_03_GetAccessList.cs" />
+    <Compile Include="database\databaseDefine.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="websocketServerConnect.cs" />
+    <Compile Include="API\API_01_register.cs" />
+    <Compile Include="API\API_01_login.cs" />
+    <EmbeddedResource Include="02_deviceAPIOperationForm.resx">
+      <DependentUpon>02_deviceAPIOperationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_mainForm.resx">
+      <DependentUpon>01_mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_FromDeviceRequetForm.resx">
+      <DependentUpon>03_FromDeviceRequetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="0WXCertificate\wx.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="0WXCertificate\密码：wx.txt" />
+    <Content Include="image\connect.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="image\enrollphoto.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="image\V.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="image\X.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="supersocket\log4net.dll" />
+    <Content Include="supersocket\SuperSocket.Common.dll" />
+    <Content Include="supersocket\SuperSocket.SocketBase.dll" />
+    <Content Include="supersocket\SuperSocket.SocketEngine.dll" />
+    <Content Include="supersocket\SuperWebSocket.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
